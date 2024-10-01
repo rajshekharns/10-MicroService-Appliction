@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/latest']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_token', url: 'https://github.com/rajshekharns/10-MicroService-Appliction.git/']])
+                    git branch: 'latest', url: 'https://github.com/rajshekharns/10-MicroService-Appliction.git'
             }
         }
         
